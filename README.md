@@ -1,6 +1,8 @@
 #### dotfiles
 
 ```
+# install vim (sudo apt-get install vim)
+# install tmux (sudo apt-get install tmux)
 # install silver_searcher (https://github.com/ggreer/the_silver_searcher)
 ```
 
