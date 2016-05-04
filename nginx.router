@@ -2,14 +2,19 @@ upstream drbapp {
   server localhost:5000;
 }
 
+upstream drbssoapp {
+  server localhost:8080;
+}
+
 upstream qrbleapp {
   server localhost:3000;
 }
 
 server {
-
   listen 80;
   server_name drb.ksakthivel.com *.drb.ksakthivel.com;
+
+  client_max_body_size 15M;
 
   location / {
     proxy_pass http://drbapp;
@@ -18,13 +23,28 @@ server {
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $remote_addr;
   }
-
 }
 
 server {
+  listen 80;
+  server_name drb-sso.ksakthivel.com;
 
+  client_max_body_size 15M;
+
+  location / {
+    proxy_pass http://drbssoapp;
+    proxy_pass_request_headers on;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+  }
+}
+
+server {
   listen 80;
   server_name qrble.ksakthivel.com *.qrble.ksakthivel.com;
+
+  client_max_body_size 15M;
 
   location / {
     proxy_pass http://qrbleapp;
@@ -33,5 +53,4 @@ server {
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $remote_addr;
   }
-
 }
