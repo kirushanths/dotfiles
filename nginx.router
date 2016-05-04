@@ -12,7 +12,7 @@ upstream qrbleapp {
 
 server {
   listen 80;
-  server_name drb.ksakthivel.com *.drb.ksakthivel.com;
+  server_name drb.ksakthivel.com;
 
   client_max_body_size 15M;
 
@@ -27,7 +27,7 @@ server {
 
 server {
   listen 80;
-  server_name drb-sso.ksakthivel.com;
+  server_name sso.drb.ksakthivel.com;
 
   client_max_body_size 15M;
 
