@@ -4,7 +4,7 @@ filetype plugin indent on
 set showcmd            " Show (partial) command in status line.
 set ignorecase         " Do case insensitive matching
 set incsearch          " Incremental search
-set nohlsearch
+set hlsearch
 set autowrite          " Automatically save before commands like :next and
 set hidden             " Hide buffers when they are abandoned
 set mouse=a            " Enable mouse usage (all modes)
@@ -52,6 +52,8 @@ syntax sync minlines=200
 set synmaxcol=200
 let html_no_rendering=1   " Don't render italic, bold, links in HTML 
 
+highlight Search ctermbg=cyan
+
 "let g:solarized_termcolors=256
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
@@ -65,8 +67,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-let g:agprg="ag -i -o --hidden --column --vimgrep" 
-" let g:ag_highlight=1
+let g:ag_prg="ag -i -o --hidden --column --vimgrep" 
+let g:ag_highlight=1
 
 let g:airline_theme='light'
 "let g:airline_extensions='tabline'
