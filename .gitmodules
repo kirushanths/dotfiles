@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/vim-fugitive-blame-ext"]
+	path = .vim/bundle/vim-fugitive-blame-ext
+	url = https://github.com/tommcdo/vim-fugitive-blame-ext.git
