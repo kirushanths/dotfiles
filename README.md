@@ -7,7 +7,12 @@ sudo apt-get install vim
 # install tmux
 sudo apt-get install tmux
 # install silver_searcher
-# https://github.com/ggreer/the_silver_searcher)
+# https://github.com/ggreer/the_silver_searcher
+cd /tmp/silver_searcher
+git clone https://github.com/ggreer/the_silver_searcher
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+./build.sh
+sudo make install
 ```
 #### Install
 ```bash
