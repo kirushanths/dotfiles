@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vim-fugitive-blame-ext"]
 	path = .vim/bundle/vim-fugitive-blame-ext
 	url = https://github.com/tommcdo/vim-fugitive-blame-ext.git
+[submodule ".vim/bundle/vim-better-whitespace"]
+	path = .vim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace
