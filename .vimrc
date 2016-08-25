@@ -87,6 +87,9 @@ let g:javascript_enable_domhtmlcss = 1
 let g:javascript_fold = 1
 let g:jsx_ext_required = 1
 
+" strip all trailing whitespace everytime on save
+autocmd BufWritePre * StripWhitespace
+
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 "inoremap <silent> <Up> <ESC><Up>
