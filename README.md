@@ -29,7 +29,7 @@ cp ~/dotfiles/nginx.router /etc/nginx/sites-available/nginx.router
 ln -s /etc/nginx/sites-available/nginx.router /etc/nginx/sites-enabled/nginx.router
 ```
 
-##### Add Vim Bundle
+##### HOW-TO: Add Vim Bundle
 ```bash
 cd ~/dotfiles/.vim/bundle
 git submodule add <GIT_REPO_URL>
