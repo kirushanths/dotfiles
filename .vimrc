@@ -23,7 +23,8 @@ set shiftwidth=2
 set softtabstop=2
 set scrolloff=1
 
-" set cursorline          " highlight current line
+set cursorline          " highlight current line
+set cursorcolumn
 set wildmenu            " visual autocomplete for command menu
 
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -33,7 +34,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set foldenable          " enable folding
+" set foldenable          " enable folding
 
 set esckeys
 set timeoutlen=10 ttimeoutlen=0
@@ -46,11 +47,11 @@ colorscheme hybrid
 
 " performance tweaks
 set lazyredraw            " redraw only when we need to.
-set nocursorcolumn
-set nocursorline
+" set nocursorcolumn
+" set nocursorline
 syntax sync minlines=200
 set synmaxcol=200
-let html_no_rendering=1   " Don't render italic, bold, links in HTML 
+let html_no_rendering=1   " Don't render italic, bold, links in HTML
 
 highlight Search ctermbg=cyan
 
@@ -67,7 +68,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-let g:ag_prg="ag -i -o --hidden --column --vimgrep" 
+let g:ag_prg="ag -i -o --hidden --column --vimgrep"
 let g:ag_highlight=1
 
 let g:airline_theme='light'
@@ -88,6 +89,7 @@ let g:javascript_fold = 1
 let g:jsx_ext_required = 1
 
 " strip all trailing whitespace everytime on save
+let g:better_whitespace_filetypes_blacklist=['xml', 'diff', 'gitcommit', 'unite', 'qf', 'help']
 autocmd BufWritePre * StripWhitespace
 
 nnoremap <Tab> :bnext<CR>

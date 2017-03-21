@@ -1,4 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/dev/work/drb-student-los/lib/deploy/data_scrub'
-let g:netrw_dirhist_2='/home/dev/work/drb-sso/lib/deploy/data_scrub'
+let g:netrw_dirhist_cnt =0
