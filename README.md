@@ -26,11 +26,11 @@ git submodule update --init --recursive
 
 # copy files to root user directory
 cd ~/dotfiles
-mdkir ~/.vim
-ln -s .vim/ ~/.vim
-ls -s .vimrc ~/.vimrc
-ls -s .tmux.conf ~/.tmux.conf
-ls -s nginx.router /etc/nginx/sites-available/nginx.router
+cp -R .vim/ ~/.vim
+cp .vimrc ~/.vimrc
+cp .tmux.conf ~/.tmux.conf
+cp nginx.router /etc/nginx/sites-available/nginx.router
+
 # enable nginx config
 ln -s /etc/nginx/sites-available/nginx.router /etc/nginx/sites-enabled/nginx.router
 ```
