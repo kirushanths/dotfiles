@@ -33,10 +33,11 @@ cd ~/dotfiles
 cp -R .vim/ ~/.vim
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
-cp nginx.router /etc/nginx/sites-available/nginx.router
+cp nginx.* /etc/nginx/sites-available/
 
 # enable nginx config
-ln -s /etc/nginx/sites-available/nginx.router /etc/nginx/sites-enabled/nginx.router
+ln -s /etc/nginx/sites-available/nginx.drb.router /etc/nginx/sites-enabled/nginx.drb.router
+ln -s /etc/nginx/sites-available/nginx.qrble.router /etc/nginx/sites-enabled/nginx.qrble.router
 ```
 
 ##### HOW-TO: Add Vim Bundle
