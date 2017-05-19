@@ -1,0 +1,13 @@
+/log*/**/*
+/tmp/**/*
+/bower_cmponents/**/*
+/node_modules/**/*
+/public/**/*
+.git*
+*.tags*
+*.gemtags*
+*.tmp*
+*.old
+*.plist
+*.pdf
+*.log
