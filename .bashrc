@@ -5,6 +5,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gbD='git branch -D'
 alias gs='git status'
+alias gd='git diff'
 
 alias drb='cd ~/Documents/Kiru/Repos/drb-student-los'
 alias sso="cd ~/Documents/Kiru/Repos/drb-sso"
@@ -35,3 +36,7 @@ alias tc_restore=restore_scrub
 alias dck=dck
 alias dcb=dcb
 alias dcps="docker-compose ps"
+alias dcr="docker-compose run --rm"
+alias dcu="docker-compose up -d"
+alias dc="docker-compose"
+
