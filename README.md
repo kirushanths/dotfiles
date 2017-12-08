@@ -23,7 +23,7 @@ sudo make install
 ```
 
 #### Setup (MacOS)
-```
+```bash
 # without scm-breeze, rely on .bashrc aliases
 # Get git-autocomplete
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
