@@ -25,6 +25,7 @@ sudo make install
 #### Setup (MacOS)
 ```bash
 # without scm-breeze, rely on .bashrc aliases
+cat .bashrc >> ~/.bashrc
 # Get git-autocomplete
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
  install vim 
@@ -48,6 +49,9 @@ cp -R .vim/ ~/.vim
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
 cp nginx.* /etc/nginx/sites-available/
+
+# without scm-breeze, rely on .bashrc aliases
+cat .bashrc >> ~/.bashrc
 
 # enable nginx config
 ln -s /etc/nginx/sites-available/nginx.drb.router /etc/nginx/sites-enabled/nginx.drb.router
