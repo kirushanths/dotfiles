@@ -67,6 +67,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
   \ }
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_max_height = 30
 
 let g:ag_prg="ag -i -o --hidden --column --vimgrep"
 let g:ag_highlight=1

@@ -1,6 +1,6 @@
 ### dotfiles
 
-#### Setup
+#### Setup (Linux)
 ```bash
 # install git shortcut aliases
 git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
@@ -21,6 +21,21 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 ./build.sh
 sudo make install
 ```
+
+#### Setup (MacOS)
+```bash
+# without scm-breeze, rely on .bashrc aliases
+cat .bashrc >> ~/.bashrc
+# Get git-autocomplete
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+ install vim 
+brew install vim
+# install tmux
+brew install tmux
+# install silver_searcher
+brew install sliver_searcher
+```
+
 #### Install
 ```bash
 git clone git@github.com:kirushanth-sakthivetpillai/dotfiles.git ~/dotfiles
@@ -34,6 +49,9 @@ cp -R .vim/ ~/.vim
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
 cp nginx.* /etc/nginx/sites-available/
+
+# without scm-breeze, rely on .bashrc aliases
+cat .bashrc >> ~/.bashrc
 
 # enable nginx config
 ln -s /etc/nginx/sites-available/nginx.drb.router /etc/nginx/sites-enabled/nginx.drb.router
