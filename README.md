@@ -28,7 +28,7 @@ sudo make install
 cat .bashrc >> ~/.bashrc
 # Get git-autocomplete
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
- install vim 
+# install vim 
 brew install vim
 # install tmux
 brew install tmux
