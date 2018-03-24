@@ -33,7 +33,7 @@ brew install vim
 # install tmux
 brew install tmux
 # install silver_searcher
-brew install sliver_searcher
+brew install the_silver_searcher
 ```
 
 #### Install
