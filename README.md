@@ -52,6 +52,7 @@ cp nginx.* /etc/nginx/sites-available/
 
 # without scm-breeze, rely on .bashrc aliases
 cat .bashrc >> ~/.bashrc
+echo "source ~/.bashrc" >> ~/.bash_profile
 
 # enable nginx config
 ln -s /etc/nginx/sites-available/nginx.drb.router /etc/nginx/sites-enabled/nginx.drb.router
