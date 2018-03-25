@@ -24,8 +24,10 @@ sudo make install
 
 #### Setup (MacOS)
 ```bash
-# without scm-breeze, rely on .bashrc aliases
-cat .bashrc >> ~/.bashrc
+# install git shortcut aliases
+git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+~/.scm_breeze/install.sh
+source ~/.bashrc
 # Get git-autocomplete
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 # install vim 
