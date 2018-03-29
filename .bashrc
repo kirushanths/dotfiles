@@ -1,5 +1,8 @@
 export BASH_CONF="bashrc"
 
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+source ~/.git-completion.bash
+
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 alias drb='cd ~/Documents/Kiru/Repos/drb-student-los'
