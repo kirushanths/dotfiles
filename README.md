@@ -40,7 +40,7 @@ brew install the_silver_searcher
 
 #### Install
 ```bash
-git clone git@github.com:kirushanth-sakthivetpillai/dotfiles.git ~/dotfiles
+git clone git@github.com:kirushanths/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 # install vim plugins
 git submodule update --init --recursive
