@@ -18,10 +18,17 @@ set noshowmatch
 set laststatus=2
 set ruler
 
+" default tab/space rules
 set expandtab
 set shiftwidth=2
+set tabstop=2
 set softtabstop=2
 set scrolloff=1
+
+" default rules on all files
+autocmd BufWritePre * set tabstop=2|set shiftwidth=2|set softtabstop=2|set expandtab
+" match go-fmt rules
+autocmd FileType go set tabstop=8|set shiftwidth=8|set noexpandtab|set softtabstop=8
 
 set cursorline          " highlight current line
 set cursorcolumn
