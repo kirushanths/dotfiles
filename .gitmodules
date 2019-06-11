@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-hexcolor"]
 	path = .vim/bundle/vim-hexcolor
 	url = git@github.com:etdev/vim-hexcolor.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go

@@ -1,17 +1,14 @@
 export BASH_CONF="bashrc"
 
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+source ~/.git-completion.bash
+
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gps='git push'
-alias gpl='git pull'
-alias gco='git checkout'
-alias gb='git branch'
-alias gbD='git branch -D'
-alias gs='git status'
-alias gd='git diff'
-
 alias drb='cd ~/Documents/Kiru/Repos/drb-student-los'
+alias drbp="cd ~/Documents/Kiru/Repos/drb-personal-los"
+alias drbs="cd ~/Documents/Kiru/Repos/drb-shared"
+alias drbg="cd ~/Documents/Kiru/Repos/drb-shared-gulp"
 alias sso="cd ~/Documents/Kiru/Repos/drb-sso"
 alias work='cd ~/Documents/Kiru/Repos'
 
@@ -43,6 +40,7 @@ alias dcps="docker-compose ps"
 alias dcr="docker-compose run --rm"
 alias dcu="docker-compose up -d"
 alias dc="docker-compose"
+alias dcl="docker-compose logs -f"
 
 # after brew install redis@3.2
 export PATH="/usr/local/opt/redis@3.2/bin:$PATH"

@@ -24,21 +24,23 @@ sudo make install
 
 #### Setup (MacOS)
 ```bash
-# without scm-breeze, rely on .bashrc aliases
-cat .bashrc >> ~/.bashrc
+# install git shortcut aliases
+git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+~/.scm_breeze/install.sh
+source ~/.bashrc
 # Get git-autocomplete
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
- install vim 
+# install vim 
 brew install vim
 # install tmux
 brew install tmux
 # install silver_searcher
-brew install sliver_searcher
+brew install the_silver_searcher
 ```
 
 #### Install
 ```bash
-git clone git@github.com:kirushanth-sakthivetpillai/dotfiles.git ~/dotfiles
+git clone git@github.com:kirushanths/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 # install vim plugins
 git submodule update --init --recursive
@@ -52,6 +54,7 @@ cp nginx.* /etc/nginx/sites-available/
 
 # without scm-breeze, rely on .bashrc aliases
 cat .bashrc >> ~/.bashrc
+echo "source ~/.bashrc" >> ~/.bash_profile
 
 # enable nginx config
 ln -s /etc/nginx/sites-available/nginx.drb.router /etc/nginx/sites-enabled/nginx.drb.router
