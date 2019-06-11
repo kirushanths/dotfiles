@@ -87,7 +87,6 @@ let g:syntastic_enable_signs = 1
 
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_fold = 1
-let g:jsx_ext_required = 0
 
 " strip all trailing whitespace everytime on save
 let g:better_whitespace_filetypes_blacklist=['xml', 'diff', 'gitcommit', 'unite', 'qf', 'help']
