@@ -1,4 +1,6 @@
 export BASH_CONF="bashrc"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 source ~/.git-completion.bash
