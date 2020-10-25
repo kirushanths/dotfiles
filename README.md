@@ -38,6 +38,23 @@ brew install tmux
 brew install the_silver_searcher
 ```
 
+#### Linux IPTables Secure Setup (w/ Docker Support)
+
+Notes:
+- DO NOT use UFW (doesn't work with Docker)
+- Add IPTable Rules before setting up Docker
+
+```bash
+# ASSUME <remote_ip> as secure IP to reach out to Linux Box
+iptables -F
+iptables -A INPUT -p tcp -s <remote_ip> -j ACCEPT
+iptables -A OUTPUT -p tcp -d <remote_ip> -j ACCEPT
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -I DOCKER-USER -i ext_if ! -s <remote_ip> -j DROP
+# restart docker daemon (to reinstall docker rules)
+```
+
 #### Install
 ```bash
 git clone git@github.com:kirushanths/dotfiles.git ~/dotfiles
