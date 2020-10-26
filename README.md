@@ -48,9 +48,9 @@ Notes:
 # ASSUME <remote_ip> as secure IP to reach out to Linux Box
 iptables -F
 iptables -A INPUT -p tcp -s <remote_ip> -j ACCEPT
-iptables -A OUTPUT -p tcp -d <remote_ip> -j ACCEPT
 iptables -P INPUT DROP
-iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
 
 # RESTART docker daemon (to reinstall docker rules)
 
