@@ -51,8 +51,23 @@ iptables -A INPUT -p tcp -s <remote_ip> -j ACCEPT
 iptables -A OUTPUT -p tcp -d <remote_ip> -j ACCEPT
 iptables -P INPUT DROP
 iptables -P OUTPUT DROP
-iptables -I DOCKER-USER -i ext_if ! -s <remote_ip> -j DROP
-# restart docker daemon (to reinstall docker rules)
+
+# RESTART docker daemon (to reinstall docker rules)
+
+## DON"T USE THIS, IT DOESN"T SUPPORT OUTBOUND CALLS from Containers
+iptables -I DOCKER-USER -i eth0 ! -s <remote_ip> -j DROP
+
+# THIS WORKS (Source: https://kfkelvinng.github.io/2017/12/07/Firewall-Docker-with-Iptables.html)
+# Default rule that created by Docker
+# iptables -I DOCKER-USER -j RETURN
+# Drop only incoming, allowing outgoing connection for DNS, apt-get, pip
+iptables -I DOCKER-USER -i eth0 -j DROP
+# Return from where we jump if it is a connection we initial (otherwise apt wouldn't work inside docker)
+iptables -I DOCKER-USER -m conntrack --ctstate RELATED,ESTABLISHED -j RETURN
+# Return from where we jump if it is an IP we trust (replace XXX with an IP you trust)
+iptables -I DOCKER-USER -s XXX.XXX.XXX.XXX/32 -i eth0 -j RETURN
+# Logging for debug (see below)
+# iptables -A DOCKER-USER -j LOG
 ```
 
 #### Install
