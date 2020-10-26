@@ -48,6 +48,7 @@ Notes:
 # ASSUME <remote_ip> as secure IP to reach out to Linux Box
 iptables -F
 iptables -A INPUT -p tcp -s <remote_ip> -j ACCEPT
+iptables -I INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
