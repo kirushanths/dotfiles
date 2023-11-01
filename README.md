@@ -3,7 +3,7 @@
 #### Setup (Linux)
 ```bash
 # install git shortcut aliases
-git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
 ~/.scm_breeze/install.sh
 source ~/.bashrc
 # install vim 
@@ -25,7 +25,7 @@ sudo make install
 #### Setup (MacOS)
 ```bash
 # install git shortcut aliases
-git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
 ~/.scm_breeze/install.sh
 source ~/.bashrc
 # Get git-autocomplete
@@ -98,4 +98,10 @@ ln -s /etc/nginx/sites-available/nginx.qrble.router /etc/nginx/sites-enabled/ngi
 ```bash
 cd ~/dotfiles/.vim/bundle
 git submodule add <GIT_REPO_URL>
+```
+
+#### HOW-TO: Update Vim Bundles
+```bash
+cd ~/dotfiles/.vim/bundle
+git submodule update --remote --merge
 ```
